@@ -1,0 +1,33 @@
+{
+  "name": "do-not-move-backwards",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/do-not-move-backwards/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/do-not-move-backwards",
+        "main": "libs/do-not-move-backwards/src/index.ts",
+        "tsConfig": "libs/do-not-move-backwards/tsconfig.lib.json",
+        "assets": ["libs/do-not-move-backwards/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs do-not-move-backwards {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/do-not-move-backwards/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

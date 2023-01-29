@@ -11,9 +11,8 @@
         "target": "node",
         "compiler": "tsc",
         "outputPath": "dist/apps/ally",
-        "main": "apps/ally/src/main.ts",
+        "main": "apps/ally/src/index.ts",
         "tsConfig": "apps/ally/tsconfig.app.json",
-        "assets": ["apps/ally/src/assets"],
         "webpackConfig": "apps/ally/webpack.config.js"
       },
       "configurations": {
