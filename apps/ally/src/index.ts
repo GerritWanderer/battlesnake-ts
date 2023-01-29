@@ -10,7 +10,7 @@
 // To get you started we've included code to prevent your Battlesnake from moving backwards.
 // For more info see docs.battlesnake.com
 
-import runServer from './server';
+import { runServer } from '@battlesnake/server';;
 import { GameState, InfoResponse, MoveResponse } from '@battlesnake/objects';
 import { doNotMoveBackwards } from '@battlesnake/do-not-move-backwards';
 

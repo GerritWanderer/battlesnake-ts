@@ -18,7 +18,8 @@
       "@battlesnake/do-not-move-backwards": [
         "libs/do-not-move-backwards/src/index.ts"
       ],
-      "@battlesnake/objects": ["libs/objects/src/index.ts"]
+      "@battlesnake/objects": ["libs/objects/src/index.ts"],
+      "@battlesnake/server": ["libs/server/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
